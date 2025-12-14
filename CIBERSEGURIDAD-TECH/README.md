@@ -1,4 +1,4 @@
-# Proyecto de Ciberseguridad – LuzEnergia
+#proyecto de Ciberseguridad – LuzEnergia
 
 Este repositorio contiene el proyecto final desarrollado en el programa **Talento Tech**, enfocado en el análisis, explotación controlada y mitigación de vulnerabilidades en una infraestructura Linux y una aplicación web.
 
