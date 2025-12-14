@@ -24,7 +24,7 @@ CREATE TABLE Usuario (
     ID_Usuario INT PRIMARY KEY,
     ID_Empleado INT,
     Nombre_Usuario VARCHAR(20),
-    Contraseña VARCHAR(50),
+    ContraseÃ±a VARCHAR(50),
     Fecha_Creacion DATE,
     FOREIGN KEY (ID_Empleado) REFERENCES Empleado(ID_Empleado)
 );
@@ -59,9 +59,9 @@ CREATE TABLE Contacto_Emergencia (
     FOREIGN KEY (ID_Paciente) REFERENCES Paciente(ID_Paciente)
 );
 
-CREATE TABLE Compañia_Seguros (
-    ID_Compañia INT PRIMARY KEY,
-    Nombre_Compañia VARCHAR(50)
+CREATE TABLE CompaÃ±ia_Seguros (
+    ID_CompaÃ±ia INT PRIMARY KEY,
+    Nombre_CompaÃ±ia VARCHAR(50)
 );
 
 CREATE TABLE Seguro_Medico (
@@ -72,7 +72,7 @@ CREATE TABLE Seguro_Medico (
     Estado_Poliza VARCHAR(10),
     Vigencia_Poliza VARCHAR(15),
     FOREIGN KEY (ID_Paciente) REFERENCES Paciente(ID_Paciente),
-    FOREIGN KEY (ID_Compania) REFERENCES Compañia_Seguros(ID_Compañia)
+    FOREIGN KEY (ID_Compania) REFERENCES CompaÃ±ia_Seguros(ID_CompaÃ±ia)
     );
     
     CREATE TABLE Factura (
