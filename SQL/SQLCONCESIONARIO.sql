@@ -33,7 +33,7 @@ CREATE TABLE Nuevo_Autos (
     ID_Autos INT PRIMARY KEY,
     ID_Modelo INT,
     ID_Especificaciones INT,
-    AÒo INT,
+    A√±o INT,
     Color VARCHAR(30),
     Precio_Base DECIMAL(12,2),
     FOREIGN KEY (ID_Modelo) REFERENCES Modelo(ID_Modelo),
@@ -187,20 +187,20 @@ INSERT INTO Marca (ID_Marca, Nombre_Marca) VALUES
 (5, 'Nissan');
 
 INSERT INTO Modelo (ID_Modelo, ID_Marca, Nombre_Modelo, Categoria_Carro, Tipo_Carroceria) VALUES
-(1, 1, 'Corolla', 'Sed·n', 'Sed·n'),
-(2, 2, 'Civic', 'Sed·n', 'Sed·n'),
-(3, 3, 'Mazda 3', 'Sed·n', 'Sed·n'),
+(1, 1, 'Corolla', 'Sed√°n', 'Sed√°n'),
+(2, 2, 'Civic', 'Sed√°n', 'Sed√°n'),
+(3, 3, 'Mazda 3', 'Sed√°n', 'Sed√°n'),
 (4, 4, 'Spark', 'Hatchback', 'Hatchback'),
-(5, 5, 'Sentra', 'Sed·n', 'Sed·n');
+(5, 5, 'Sentra', 'Sed√°n', 'Sed√°n');
 
 INSERT INTO Especificaciones (ID_Especificaciones, Motor, Transmision, Combustible, Kilometraje, Numero_puertas, Numero_pasajeros) VALUES
-(1, 1.8, 'Autom·tica', 'Gasolina', 0, 4, 5),
+(1, 1.8, 'Autom√°tica', 'Gasolina', 0, 4, 5),
 (2, 2.0, 'Manual', 'Gasolina', 0, 4, 5),
-(3, 2.5, 'Autom·tica', 'Gasolina', 5000, 4, 5),
+(3, 2.5, 'Autom√°tica', 'Gasolina', 5000, 4, 5),
 (4, 1.4, 'Manual', 'Gasolina', 0, 5, 5),
 (5, 1.8, 'CVT', 'Gasolina', 0, 4, 5);
 
-INSERT INTO Nuevo_Autos (ID_Autos, ID_Modelo, ID_Especificaciones, AÒo, Color, Precio_Base) VALUES
+INSERT INTO Nuevo_Autos (ID_Autos, ID_Modelo, ID_Especificaciones, A√±o, Color, Precio_Base) VALUES
 (1, 1, 1, 2024, 'Blanco', 85000000),
 (2, 2, 2, 2024, 'Negro', 95000000),
 (3, 3, 3, 2023, 'Rojo', 90000000),
@@ -213,17 +213,17 @@ INSERT INTO Nuevo_Autos (ID_Autos, ID_Modelo, ID_Especificaciones, AÒo, Color, P
 (10, 5, 5, 2024, 'Plata', 88000000);
 
 INSERT INTO CLIENTE (ID_Cliente, Nombre_Cliente, Tipo_Documento, Num_Documento, Direccion_Cliente, ID_Ubicacion) VALUES
-(1, 'Juan PÈrez', 'CC', '1234567890', 'Calle 45 #23-10', 1),
-(2, 'Ana GarcÌa', 'CC', '9876543210', 'Carrera 70 #80-15', 2),
-(3, 'Carlos LÛpez', 'CE', '1122334455', 'Avenida 6 #25-30', 3),
-(4, 'MarÌa RodrÌguez', 'CC', '5544332211', 'Calle 100 #15-20', 2),
-(5, 'Pedro S·nchez', 'CC', '6677889900', 'Carrera 50 #45-30', 4);
+(1, 'Juan P√©rez', 'CC', '1234567890', 'Calle 45 #23-10', 1),
+(2, 'Ana Garc√≠a', 'CC', '9876543210', 'Carrera 70 #80-15', 2),
+(3, 'Carlos L√≥pez', 'CE', '1122334455', 'Avenida 6 #25-30', 3),
+(4, 'Mar√≠a Rodr√≠guez', 'CC', '5544332211', 'Calle 100 #15-20', 2),
+(5, 'Pedro S√°nchez', 'CC', '6677889900', 'Carrera 50 #45-30', 4);
 
 INSERT INTO UBICACION_CLIENTE (ID_Ubicacion, Ciudad, Departamento, Pais) VALUES
-(1, 'MedellÌn', 'Antioquia', 'Colombia'),
-(2, 'Bogot·', 'Cundinamarca', 'Colombia'),
+(1, 'Medell√≠n', 'Antioquia', 'Colombia'),
+(2, 'Bogot√°', 'Cundinamarca', 'Colombia'),
 (3, 'Cali', 'Valle del Cauca', 'Colombia'),
-(4, 'Barranquilla', 'Atl·ntico', 'Colombia');
+(4, 'Barranquilla', 'Atl√°ntico', 'Colombia');
 
 INSERT INTO CONTACTO_CLIENTE (ID_Contacto, ID_Cliente, Email, Telefono) VALUES
 (1, 1, 'juan.perez@email.com', '3001234567'),
@@ -233,19 +233,19 @@ INSERT INTO CONTACTO_CLIENTE (ID_Contacto, ID_Cliente, Email, Telefono) VALUES
 (5, 5, 'pedro.sanchez@email.com', '3201239876');
 
 INSERT INTO Sucursal (ID_Sucursal, Nombre_Sucursal, Ciudad_Sucursal) VALUES
-(1, 'MedellÌn Centro', 'MedellÌn'),
-(2, 'Bogot· Norte', 'Bogot·'),
+(1, 'Medell√≠n Centro', 'Medell√≠n'),
+(2, 'Bogot√° Norte', 'Bogot√°'),
 (3, 'Cali Sur', 'Cali');
 
 INSERT INTO Vendedor_Normalizado (ID_Vendedor, Nombre_Vendedor, Email_Vendedor, Telefono_Vendedor, Comision_Vendedor, ID_Sucursal) VALUES
-(1, 'MarÌa LÛpez', 'maria.lopez@carros.com', '3107654321', 5, 1),
+(1, 'Mar√≠a L√≥pez', 'maria.lopez@carros.com', '3107654321', 5, 1),
 (2, 'Carlos Ruiz', 'carlos.ruiz@carros.com', '3156789012', 5, 2),
-(3, 'Laura MartÌnez', 'laura.martinez@carros.com', '3201234567', 5, 3);
+(3, 'Laura Mart√≠nez', 'laura.martinez@carros.com', '3201234567', 5, 3);
 
 INSERT INTO Metodo_De_Pago (ID_Metodo_Pago, Metodo) VALUES
 (1, 'Efectivo'),
-(2, 'Tarjeta de CrÈdito'),
-(3, 'FinanciaciÛn'),
+(2, 'Tarjeta de Cr√©dito'),
+(3, 'Financiaci√≥n'),
 (4, 'Cheque');
 
 INSERT INTO Financiamiento (ID_Financiamiento, ID_Metodo_Pago, Cuotas, Entidad_Financiera, Tasa_Interes) VALUES
@@ -262,8 +262,8 @@ VALUES
 (3, 1, 'Seguros Bolivar', 2500000); 
 
 INSERT INTO Test_Drive_Normalizado (ID_Test_Drive, Realizado, Fecha_Test_Drive, Observaciones) VALUES
-(1, 'SÌ', '25/01/2025', 'Test drive realizado con Èxito'),
-(2, 'No', 'N/A', 'No se realizÛ test drive');
+(1, 'S√≠', '25/01/2025', 'Test drive realizado con √©xito'),
+(2, 'No', 'N/A', 'No se realiz√≥ test drive');
 
 INSERT INTO Transportadora (ID_Transportadora, Nombre_Transportadora, Telefono) VALUES
 (1, 'Servientrega', '3001234567'),
